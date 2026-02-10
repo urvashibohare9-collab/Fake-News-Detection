@@ -11,7 +11,7 @@ news_input = st.text_area("News Article:","")
 
 if st.button("check News"):
     if news_input.strip():
-        transform_input = vectorizer.transformr([news_input])
+        transform_input = vectorizer.transform([news_input])
         prediction = model.predict(transform_input)
 
         if prediction[0]==1:
